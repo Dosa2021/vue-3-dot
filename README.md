@@ -12,3 +12,5 @@ App.vue
 ・Vue.js 3入門 応用編
     ・v-text
     ・v-bind
+    ・v-on
+    ・ref

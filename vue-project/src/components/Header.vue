@@ -1,6 +1,9 @@
 <script setup>
+import { ref } from 'vue';
+
 const intro = 'フロントエンドエンジニア見習いです。';
 const imgUrl = '/mei_1.jpg';
+let count = ref(0);
 </script>
 
 <template>
@@ -13,6 +16,7 @@ const imgUrl = '/mei_1.jpg';
     <!-- <p v-text="intro"></p> -->
      <p>{{ intro }}</p>
      <p>{{ intro.length }}</p>
+     <button v-on:click="count++">いいね！ {{ count }}</button>
   </header>
 </template>
 
