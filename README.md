@@ -15,3 +15,4 @@ App.vue
     ・v-on
     ・ref
     ・v-if
+    ・v-for

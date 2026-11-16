@@ -5,6 +5,12 @@ const intro = 'フロントエンドエンジニア見習いです。';
 const imgUrl = '/mei_1.jpg';
 // let count = ref(0);
 const count = ref(0);
+const tags = [
+    '#HTML',
+    '#CSS',
+    '#JS'
+]
+console.log('tags-------------', tags)
 
 function increment() {
     console.log('increment-----')
@@ -23,6 +29,11 @@ function increment() {
     <!-- <p v-text="intro"></p> -->
     <p>{{ intro }}</p>
     <p>{{ intro.length }}</p>
+
+    <ul>
+        <li v-for="tag in tags">{{ tag }}</li>
+    </ul>
+
     <!-- <button v-on:click="count++">いいね！ {{ count }}</button> -->
     <!-- <button @click="count++">いいね！ {{ count }}</button> -->
     <button @click="increment">いいね！ {{ count }}</button>
