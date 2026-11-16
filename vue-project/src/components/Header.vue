@@ -26,6 +26,11 @@ function increment() {
     <!-- <button v-on:click="count++">いいね！ {{ count }}</button> -->
     <!-- <button @click="count++">いいね！ {{ count }}</button> -->
     <button @click="increment">いいね！ {{ count }}</button>
+    <template v-if="count > 5">
+        <p>応援ありがとう</p>
+        <p>嬉しいです</p>
+    </template>
+    <p v-else>いいねお願い</p>
   </header>
 </template>
 

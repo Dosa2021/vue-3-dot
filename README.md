@@ -14,3 +14,4 @@ App.vue
     ・v-bind
     ・v-on
     ・ref
+    ・v-if
