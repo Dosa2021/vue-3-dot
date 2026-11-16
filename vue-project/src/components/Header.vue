@@ -3,7 +3,14 @@ import { ref } from 'vue';
 
 const intro = 'フロントエンドエンジニア見習いです。';
 const imgUrl = '/mei_1.jpg';
-let count = ref(0);
+// let count = ref(0);
+const count = ref(0);
+
+function increment() {
+    console.log('increment-----')
+    // count++;
+    count.value++;
+}
 </script>
 
 <template>
@@ -14,9 +21,11 @@ let count = ref(0);
 
     <h1>山田太郎</h1>
     <!-- <p v-text="intro"></p> -->
-     <p>{{ intro }}</p>
-     <p>{{ intro.length }}</p>
-     <button v-on:click="count++">いいね！ {{ count }}</button>
+    <p>{{ intro }}</p>
+    <p>{{ intro.length }}</p>
+    <!-- <button v-on:click="count++">いいね！ {{ count }}</button> -->
+    <!-- <button @click="count++">いいね！ {{ count }}</button> -->
+    <button @click="increment">いいね！ {{ count }}</button>
   </header>
 </template>
 
