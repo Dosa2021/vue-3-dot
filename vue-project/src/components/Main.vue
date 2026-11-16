@@ -1,12 +1,31 @@
 <script setup lang="ts">
 import WorkSedction from './WorkSedction.vue';
 
-const work1 = {
+const work1 = 
+{
   imgUrl: '/ume.jpeg',
   title: 'すごい勇者ゲーム',
   desc: 'すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。',
 };
 
+const works = [
+    {
+      imgUrl: '/ume.jpeg',
+      title: 'タイトル1',
+      desc: 'すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。',
+    },
+    {
+      imgUrl: '/ume.jpeg',
+      title: 'タイトル2',
+      desc: 'すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。',
+    },
+    {
+      imgUrl: '/ume.jpeg',
+      title: 'タイトル3',
+      desc: 'すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。',
+    }
+]
+console.log('works-----', works)
 </script>
 
 <template>
@@ -17,6 +36,9 @@ const work1 = {
             :title="work1.title"
             :desc="work1.desc"
         /> -->
-        <WorkSedction v-bind="work1"/>
+        <!-- <WorkSedction v-bind="works[0]"/>
+        <WorkSedction v-bind="works[1]"/> -->
+
+        <WorkSedction v-for="work in works" v-bind="work"/>
     </main>
 </template>
