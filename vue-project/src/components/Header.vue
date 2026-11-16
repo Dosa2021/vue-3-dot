@@ -1,8 +1,14 @@
+<script setup>
+const intro = 'フロントエンドエンジニア見習いです。';
+</script>
+
 <template>
   <header>
     <img src="/mei_1.jpg" alt="太郎のアイコン">
     <h1>山田太郎</h1>
-    <p>Webデザイナー見習いです</p>
+    <!-- <p v-text="intro"></p> -->
+     <p>{{ intro }}</p>
+     <p>{{ intro.length }}</p>
   </header>
 </template>
 
