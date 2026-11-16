@@ -1,10 +1,14 @@
 <script setup>
 const intro = 'フロントエンドエンジニア見習いです。';
+const imgUrl = '/mei_1.jpg';
 </script>
 
 <template>
   <header>
-    <img src="/mei_1.jpg" alt="太郎のアイコン">
+    <!-- <img src="/mei_1.jpg" alt="太郎のアイコン"> -->
+    <!-- <img v-bind:src="imgUrl" alt="太郎のアイコン"> -->
+    <img :src="imgUrl" alt="太郎のアイコン">
+
     <h1>山田太郎</h1>
     <!-- <p v-text="intro"></p> -->
      <p>{{ intro }}</p>
@@ -15,7 +19,6 @@ const intro = 'フロントエンドエンジニア見習いです。';
 <!-- Note: scopedをつけることで、cssの適用範囲を、このコンポーネントに限定 -->
 <style scoped>
 header {
-    background-color: skyblue;
     text-align: center;
     width: 100%;
 }
