@@ -1,10 +1,30 @@
-<!-- <script setup lang="ts">
-import photo from './assets/photo.png'
-</script> -->
-
 <template>
-  <div>
-    <h1>Hello</h1>
-    <img src="/mei_1.jpg" alt="写真" />
-  </div>
+  <header>
+    <img src="/mei_1.jpg" alt="太郎のアイコン" width="128" height="128">
+    <h1>山田太郎</h1>
+    <p>Webデザイナー見習いです</p>
+  </header>
+
+  <main>
+    <h2>WORKS</h2>
+    <section>
+      <!-- <img src="/work-1.png" alt="すごい勇者ゲーム" width="400" height="240"> -->
+      <h3>すごい勇者ゲーム</h3>
+      <p>すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。すごい勇者ゲームです。</p>
+    </section>
+    <section>
+      <!-- <img src="/work-2.png" alt="すごい宝物ゲーム" width="400" height="240"> -->
+      <h3>すごい宝物ゲーム</h3>
+      <p>すごい宝物ゲームです。すごい宝物ゲームです。すごい宝物ゲームです。すごい宝物ゲームです。すごい宝物ゲームです。すごい宝物ゲームです。すごい宝物ゲームです。</p>
+    </section>
+    <section>
+      <!-- <img src="/work-3.png" alt="すごいカードゲーム" width="400" height="240"> -->
+      <h3>すごいカードゲーム</h3>
+      <p>すごいカードゲームです。すごいカードゲームです。すごいカードゲームです。すごいカードゲームです。すごいカードゲームです。すごいカードゲームです。すごいカードゲームです。</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>(c) dotinstall.com</small>
+  </footer>
 </template>
