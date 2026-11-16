@@ -1,15 +1,53 @@
+<script setup>
+import { ref } from 'vue';
+
+const intro = 'フロントエンドエンジニア見習いです。';
+const imgUrl = '/mei_1.jpg';
+// let count = ref(0);
+const count = ref(0);
+const tags = [
+    '#HTML',
+    '#CSS',
+    '#JS'
+]
+console.log('tags-------------', tags)
+
+function increment() {
+    console.log('increment-----')
+    // count++;
+    count.value++;
+}
+</script>
+
 <template>
   <header>
-    <img src="/mei_1.jpg" alt="太郎のアイコン">
+    <!-- <img src="/mei_1.jpg" alt="太郎のアイコン"> -->
+    <!-- <img v-bind:src="imgUrl" alt="太郎のアイコン"> -->
+    <img :src="imgUrl" alt="太郎のアイコン">
+
     <h1>山田太郎</h1>
-    <p>Webデザイナー見習いです</p>
+    <!-- <p v-text="intro"></p> -->
+    <p>{{ intro }}</p>
+    <p>{{ intro.length }}</p>
+
+    <ul>
+        <li v-for="tag in tags">{{ tag }}</li>
+    </ul>
+
+    <!-- <button v-on:click="count++">いいね！ {{ count }}</button> -->
+    <!-- <button @click="count++">いいね！ {{ count }}</button> -->
+    <button @click="increment">いいね！ {{ count }}</button>
+    <template v-if="count > 5">
+        <p>応援ありがとう</p>
+        <p>嬉しいです</p>
+    </template>
+    <p v-else>いいねお願い</p>
   </header>
 </template>
 
 <!-- Note: scopedをつけることで、cssの適用範囲を、このコンポーネントに限定 -->
 <style scoped>
 header {
-    background-color: skyblue;
     text-align: center;
     width: 100%;
 }
